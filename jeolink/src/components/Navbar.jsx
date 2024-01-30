@@ -2,7 +2,6 @@ import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -16,17 +15,16 @@ export default function ButtonAppBar() {
         <Toolbar sx={{
         justifyContent: 'space-between'
         }} >
-        <Button color="inherit">JEOLINKS</Button>
+        <Button color="inherit" component={Link} to="../routes/Home">JEOLINKS</Button>
 
         <div>
         <ButtonGroup variant="text"  disableElevation sx={{
           display:{xs: 'none', sm:'flex'}
         }}>
-        <Button color="inherit">HOME</Button>
-        <Button color="inherit">ABOUT US</Button>
-        <Button color="inherit" onClick={
-          <Link to="../pages/ErroPage"/>
-        }>OUR DIRECTORATES</Button>
+        <Button color="inherit" component={Link} to="../routes/Home">HOME</Button>
+        <Button color="inherit" component={Link} to="../routes/About">ABOUT US</Button>
+        <Button color="inherit"  component={Link} to="../routes/Contact">OUR DIRECTORATES</Button>
+
         </ButtonGroup>
         <IconButton
             size="large"
