@@ -7,7 +7,8 @@ function Navbar() {
 
   return (
 
-    <Appbar
+    <Appbar>
+    </Appbar>
 
   )
 }

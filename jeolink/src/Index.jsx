@@ -4,7 +4,7 @@ function Index() {
 
   return (
     <>
-    <Navb
+    <Navbar/>
     </>
 
   )
