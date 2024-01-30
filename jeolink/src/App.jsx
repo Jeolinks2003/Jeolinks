@@ -1,21 +1,27 @@
-import { useState } from 'react'
-import { BrowserRouter as Router, Switch, Route } from 'react'
-import './App.css'
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar.jsx";
+import Home from "./pages/Home";
+
+import About from "./pages/About";
+import NoPage from "./pages/Nopage";
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
-    <Router>
-      <Switch>
-        <Route exact path="/">
-          <Index/>
-        </Route>
-        <Route path="/About">
-          <About/>
-        </Route>
-      </Switch>
-    </Router>
+
+
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Navbar />}>
+        <Route index element={<Home />} />
+        <Route path="About" element={<About />} />
+        <Route path="contact" element={<Contact />} />
+        <Route path="*" element={<NoPage />} />
+      </Route>
+    </Routes>
+  </BrowserRouter>
 
   )
 }

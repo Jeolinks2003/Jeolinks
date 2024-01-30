@@ -1,3 +1,15 @@
 body{
+  width: 100%;
+  height: 100vh;
   margin: 0;
+  background-color:hsla(186,0%,100%,1);
+background:
+radial-gradient(at 35% 8%, hsla(191,95%,49%,0.02) 0px, transparent 50%),
+radial-gradient(at 80% 0%, hsla(188,81%,49%,0.25) 0px, transparent 50%),
+radial-gradient(at 0% 50%, hsla(183, 91%, 50%, 0.164) 0px, transparent 50%),
+radial-gradient(at 99% 50%, hsla(184,95%,51%,0.27) 0px, transparent 50%),
+radial-gradient(at 0% 100%, hsla(187, 100%, 50%, 0.199) 0px, transparent 50%),
+radial-gradient(at 80% 100%, hsla(183, 89%, 50%, 0.219) 0px, transparent 50%),
+radial-gradient(at 0% 0%, hsla(187,91%,48%,0.32) 0px, transparent 50%);
+
 }
