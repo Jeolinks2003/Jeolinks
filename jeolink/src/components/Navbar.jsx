@@ -10,7 +10,9 @@ import { Link } from 'react-router-dom';
 
 export default function ButtonAppBar() {
   return (
-    <Box sx={{ flexGrow: 1 }} disableElevation>
+    <Box disableElevation  sx={{ flexGrow: 1,
+      display:{xs: 'none', sm:'flex'}
+    }}>
       <AppBar position="static">
         <Toolbar sx={{
         justifyContent: 'space-between'
@@ -18,9 +20,7 @@ export default function ButtonAppBar() {
         <Button color="inherit" component={Link} to="../routes/Home">JEOLINKS</Button>
 
         <div>
-        <ButtonGroup variant="text"  disableElevation sx={{
-          display:{xs: 'none', sm:'flex'}
-        }}>
+        <ButtonGroup variant="text"  disableElevation>
         <Button color="inherit" component={Link} to="../routes/Home">HOME</Button>
         <Button color="inherit" component={Link} to="../routes/About">ABOUT US</Button>
         <Button color="inherit"  component={Link} to="../routes/Contact">OUR DIRECTORATES</Button>
