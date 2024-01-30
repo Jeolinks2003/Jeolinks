@@ -7,6 +7,7 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { ButtonGroup } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 export default function ButtonAppBar() {
   return (
@@ -23,7 +24,9 @@ export default function ButtonAppBar() {
         }}>
         <Button color="inherit">HOME</Button>
         <Button color="inherit">ABOUT US</Button>
-        <Button color="inherit">OUR DIRECTORATES</Button>
+        <Button color="inherit" onClick={
+          <Link to="../pages/ErroPage"/>
+        }>OUR DIRECTORATES</Button>
         </ButtonGroup>
         <IconButton
             size="large"
