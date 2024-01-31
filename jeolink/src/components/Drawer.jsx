@@ -12,12 +12,13 @@ const style = {
   position: 'absolute' ,
   top: '0',
   left: '0',
-  width: 100,
+  width: 200,
   height: '100vh',
   bgcolor: 'background.paper',
   border: 'none',
   boxShadow: 24,
-  p: 2,
+  p: 0,
+  
 };
 
 export default function BasicModal() {
@@ -26,7 +27,7 @@ export default function BasicModal() {
   const handleClose = () => setOpen(false);
 
   return (
-    <Box disableElevation  sx={{ flexGrow: 1, display:{xs: 'flex', sm:'none'}}}>
+    <Box disableElevation  sx={{ flexGrow: 1, display:{xs: 'flex', md:'none'}}}>
     <AppBar position="static">
     <Toolbar sx={{justifyContent: 'space-between'}}>
     <Button color="inherit" component={Link} to="../routes/Home">JEOLINKS</Button>

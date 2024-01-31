@@ -1,16 +1,18 @@
 import * as React from 'react';
-import ListSubheader from '@mui/material/ListSubheader';
 import List from '@mui/material/List';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
+import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
+import InfoRoundedIcon from '@mui/icons-material/InfoRounded';
 import Collapse from '@mui/material/Collapse';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import DraftsIcon from '@mui/icons-material/Drafts';
-import SendIcon from '@mui/icons-material/Send';
 import ExpandLess from '@mui/icons-material/ExpandLess';
-import ExpandMore from '@mui/icons-material/ExpandMore';
-import StarBorder from '@mui/icons-material/StarBorder';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import CallRoundedIcon from '@mui/icons-material/CallRounded';
+import WorkspacesRoundedIcon from '@mui/icons-material/WorkspacesRounded';
+import PeopleRoundedIcon from '@mui/icons-material/PeopleRounded';
+import { Accordion, AccordionDetails, AccordionSummary, Typography } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 export default function NestedList() {
   const [open, setOpen] = React.useState(true);
@@ -21,44 +23,89 @@ export default function NestedList() {
 
   return (
     <List
-      sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
       component="nav"
       aria-labelledby="nested-list-subheader"
       subheader={
-        <ListSubheader component="div" id="nested-list-subheader">
-          Nested List Items
-        </ListSubheader>
+        <Typography variant="h5" color="initial" p={2} component={Link} to="../routes/Home">JEOLINKS</Typography>
       }
     >
-      <ListItemButton>
+      <ListItemButton component={Link} to="../routes/Home">
         <ListItemIcon>
-          <SendIcon />
+          <HomeRoundedIcon />
         </ListItemIcon>
-        <ListItemText primary="Sent mail" />
+        <ListItemText primary="Home" />
       </ListItemButton>
-      <ListItemButton>
+      <ListItemButton component={Link} to="../routes/About">
         <ListItemIcon>
-          <DraftsIcon />
+          <InfoRoundedIcon />
         </ListItemIcon>
-        <ListItemText primary="Drafts" />
+        <ListItemText primary="About Us" />
       </ListItemButton>
-      <ListItemButton onClick={handleClick}>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon  sx={{ paddingRight:2}}/>}
+          aria-controls="panel1-content"
+          id="panel1-header"
+        >
+        <ListItemButton  sx={{ paddingY: 0}}>
         <ListItemIcon>
-          <InboxIcon />
+          <PeopleRoundedIcon  sx={{ paddingLeft:1}}/>
         </ListItemIcon>
-        <ListItemText primary="Inbox" />
-        {open ? <ExpandLess /> : <ExpandMore />}
+        <ListItemText primary="Our Directoriates" />
+        
       </ListItemButton>
-      <Collapse in={open} timeout="auto" unmountOnExit>
-        <List component="div" disablePadding>
-          <ListItemButton sx={{ pl: 4 }}>
-            <ListItemIcon>
-              <StarBorder />
-            </ListItemIcon>
-            <ListItemText primary="Starred" />
-          </ListItemButton>
+        </AccordionSummary>
+        <AccordionDetails>
+        <List disablePadding>
+          <ListItemButton component={Link} to="../routes/Directoriates">
+            <ListItemText primary="Research Services" />
+            </ListItemButton>
+        <ListItemButton component={Link} to="../routes/Directoriates">
+            <ListItemText primary="Technology Solutions" />
+            </ListItemButton>
+            <ListItemButton component={Link} to="../routes/Directoriates">
+            <ListItemText primary="Communication Services" />
+            </ListItemButton>
+            <ListItemButton component={Link} to="../routes/Directoriates">
+            <ListItemText primary="Educational Services" />
+            </ListItemButton>
         </List>
-      </Collapse>
+        </AccordionDetails>
+      </Accordion>
+      <ListItemButton component={Link} to="../routes/Work">
+      <ListItemIcon>
+        <WorkspacesRoundedIcon />
+      </ListItemIcon>
+      <ListItemText primary="Work" />
+    </ListItemButton>
+    <Accordion>
+    <AccordionSummary
+      expandIcon={<ExpandMoreIcon sx={{ paddingRight:2}}/>}
+      aria-controls="panel1-content"
+      id="panel1-header"
+    >
+    <ListItemButton  sx={{ paddingY: 0}}>
+    <ListItemIcon>
+      <PeopleRoundedIcon  sx={{ paddingLeft:1}}/>
+    </ListItemIcon>
+    <ListItemText primary="Community" />
+    
+  </ListItemButton>
+    </AccordionSummary>
+    <AccordionDetails>
+    <List disablePadding>
+      <ListItemButton component={Link} to="../routes/Community">
+        <ListItemText primary="O C P I" />
+        </ListItemButton>
+    </List>
+    </AccordionDetails>
+  </Accordion>
+      <ListItemButton component={Link} to="../routes/Contact">
+      <ListItemIcon>
+        <CallRoundedIcon />
+      </ListItemIcon>
+      <ListItemText primary="Contact Us" />
+    </ListItemButton>
     </List>
   );
 }

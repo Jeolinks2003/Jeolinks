@@ -7,6 +7,10 @@ import {createBrowserRouter, RouterProvider,} from "react-router-dom";
 import './App.css'
 import App from './App';
 import Home from './routes/Home';
+import Directoriates from './routes/Directoriates';
+import Community from './routes/Community';
+import Work from './routes/Work';
+
 
 const router = createBrowserRouter([
   {
@@ -25,6 +29,18 @@ const router = createBrowserRouter([
       {
         path: "/routes/Home",
         element: <Home />,
+      },
+      {
+        path: "/routes/Directoriates",
+        element: <Directoriates />,
+      },
+      {
+        path: "/routes/Community",
+        element: <Community />,
+      },
+      {
+        path: "/routes/Work",
+        element: <Work />,
       },
     ],
   },

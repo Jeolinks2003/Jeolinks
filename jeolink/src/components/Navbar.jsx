@@ -60,7 +60,7 @@ export default function ButtonAppBar() {
 
   return (
     <Box disableElevation  sx={{ flexGrow: 1, paddingY: '0',
-      display:{xs: 'none', sm:'flex'}
+      display:{xs: 'none', md:'flex'}
     }}>
       <AppBar position="static" sx={{paddingY: '0'}}>
         <Toolbar sx={{
@@ -90,12 +90,12 @@ export default function ButtonAppBar() {
         }}
         TransitionComponent={Fade}
       >
-        <MenuItem onClick={handleClose} component={Link} to="../routes/Contact">Research Services</MenuItem>
-        <MenuItem onClick={handleClose} component={Link} to="../routes/Contact">Technology Solutions</MenuItem>
-        <MenuItem onClick={handleClose} component={Link} to="../routes/Contact">Communication Services</MenuItem>
-        <MenuItem onClick={handleClose} component={Link} to="../routes/Contact">Educational Services</MenuItem>
+        <MenuItem onClick={handleClose} component={Link} to="../routes/Directoriates">Research Services</MenuItem>
+        <MenuItem onClick={handleClose} component={Link} to="../routes/Directoriates">Technology Solutions</MenuItem>
+        <MenuItem onClick={handleClose} component={Link} to="../routes/Directoriates">Communication Services</MenuItem>
+        <MenuItem onClick={handleClose} component={Link} to="../routes/Directoriates">Educational Services</MenuItem>
       </Menu>
-        <Button color="inherit"  component={Link} to="../routes/Contact">WORK</Button>
+        <Button color="inherit"  component={Link} to="../routes/Work">WORK</Button>
         <Button color="inherit"
         ref={anchorRef}
         id="composition-button"
@@ -130,7 +130,7 @@ export default function ButtonAppBar() {
                 aria-labelledby="composition-button"
                 onKeyDown={handleListKeyDown}
               >
-                <MenuItem onClick={handleCloseTwo} component={Link} to="../routes/Contact">O C P I</MenuItem>
+                <MenuItem onClick={handleCloseTwo} component={Link} to="../routes/Community">O C P I</MenuItem>
               </MenuList>
             </ClickAwayListener>
           </Paper>
