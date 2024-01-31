@@ -59,10 +59,10 @@ export default function ButtonAppBar() {
 
 
   return (
-    <Box disableElevation  sx={{ flexGrow: 1, paddingY: '0',
+    <Box sx={{ paddingY: '0',
       display:{xs: 'none', md:'flex'}
     }}>
-      <AppBar position="static" sx={{paddingY: '0'}}>
+      <AppBar  elevation={1} position="static" sx={{paddingY: '0'}}>
         <Toolbar sx={{
         justifyContent: 'space-between',  paddingY: '0',
         }} >
@@ -81,6 +81,7 @@ export default function ButtonAppBar() {
         OUR DIRECTORATES <ExpandMoreIcon/> </Button>
 
         <Menu
+        bgColor={'primary'}
         id="basic-menu"
         anchorEl={anchorEl}
         open={open}
