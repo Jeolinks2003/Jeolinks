@@ -134,17 +134,23 @@ marginTop:'20px'}}>{title}</Typography>
     </Paper>
 
     <Paper elevation={0} sx={{margin:'auto', marginBottom:'20px', width:'95%', padding:'5px'}}>
-    <Typography variant="h6" color="initial" sx={{width:'100%', backGroundColor:'background'}}>ABOUT US</Typography>
+    <Typography variant="h6" color="secondary" sx={{width:'100%', backGroundColor:'background'}}>ABOUT US</Typography>
     <Divider/>
     <Box>
-    <Typography variant="body1"  color="initial" marginBottom={'20px'}><span sx={{fontWeight:'500', fontsize:'20px'}}>Who We Are:</span> we originally started in 2018 as a startup firm, JEOLINKS has pave its way into the heights of innovative technology services world, envision to
+    <Typography variant="body1"  color="initial" marginBottom={'20px'}><span fontweight={'500'}>Who We Are:</span> we originally started in 2018 as a startup firm, JEOLINKS has pave its way into the heights of innovative technology services world, envision to
     develop clients into informed, proactive users of internet services!</Typography>
     <Typography variant="body1"  color="initial" marginBottom={'20px'}><span sx={{fontWeight:'500', fontsize:'20px'}}>What we do:</span> Our highly skilled team keep pace with our community’s emerging needs, we continue to evolve our competencies across four main families of
     practice, including Planning and Design, Service Delivery and Operations, Data Strategy, and Innovative Technology</Typography>
     <Typography variant="body1"  color="initial" marginBottom={'20px'}><span sx={{fontWeight:'500px', fontsize:'20px'}}>Why Us:</span>Your search for your IT/consulting needs is now over- JEOLINKS was your missing element. Our pricing is completely bespoke and is based on your
     objectives.</Typography>
-    
+    <Button variant="text" color='inherit' component={Link} to="../routes/About"  sx={{justifyItems: 'center', padding: '10px'}} startIcon={<KeyboardDoubleArrowLeftRoundedIcon/>} endIcon={<KeyboardDoubleArrowRightRoundedIcon/>}>Read More</Button>
     </Box>
+    </Paper>
+    <Paper elevation={0} sx={{margin:'auto', marginBottom:'20px', width:'95%', padding:'5px'}}>
+    <Typography variant="h6" color="secondary">WORKS:</Typography>
+    <Divider/>
+    <Typography marginTop={'20px'} variant="body1" color="initial">We believe our work speaks for itself. - Ready to JOIN? - Get in touch</Typography>
+    <Typography variant="h6" color="initial">(34) Customers – (22) Projects – (0.1) Issues Resolved in Millions – (0.2) Innovative Ideas in Millions</Typography>
     </Paper>
   </Box>
   )
