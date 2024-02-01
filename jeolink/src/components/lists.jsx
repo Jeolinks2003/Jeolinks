@@ -29,19 +29,19 @@ export default function NestedList() {
         <Typography  variant="h5" color="initial" p={2}>JEOLINKS</Typography>
       }
     >
-      <ListItemButton component={Link} to="../routes/Home">
+      <ListItemButton elevation={1} component={Link} to="../routes/Home">
         <ListItemIcon>
           <HomeRoundedIcon />
         </ListItemIcon>
         <ListItemText primary="Home" />
       </ListItemButton>
-      <ListItemButton component={Link} to="../routes/About">
+      <ListItemButton elevation={1} component={Link} to="../routes/About">
         <ListItemIcon>
           <InfoRoundedIcon />
         </ListItemIcon>
         <ListItemText primary="About Us" />
       </ListItemButton>
-      <Accordion sx={{ paddingRight:2}}>
+      <Accordion elevation={1} sx={{ paddingRight:2}}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1-content"
@@ -72,13 +72,13 @@ export default function NestedList() {
         </List>
         </AccordionDetails>
       </Accordion>
-      <ListItemButton component={Link} to="../routes/Work">
+      <ListItemButton elevation={1} component={Link} to="../routes/Work">
       <ListItemIcon>
         <WorkspacesRoundedIcon />
       </ListItemIcon>
       <ListItemText primary="Work" />
     </ListItemButton>
-    <Accordion sx={{ paddingRight:2}}>
+    <Accordion elevation={1} sx={{ paddingRight:2}}>
     <AccordionSummary
       expandIcon={<ExpandMoreIcon/>}
       aria-controls="panel1-content"
@@ -100,7 +100,7 @@ export default function NestedList() {
     </List>
     </AccordionDetails>
   </Accordion>
-      <ListItemButton component={Link} to="../routes/Contact">
+      <ListItemButton elevation={1} component={Link} to="../routes/Contact">
       <ListItemIcon>
         <CallRoundedIcon />
       </ListItemIcon>

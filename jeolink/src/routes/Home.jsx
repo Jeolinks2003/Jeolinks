@@ -1,13 +1,15 @@
 import React from 'react'
 import Typography from '@mui/material/Typography'
-import { Box, Button } from '@mui/material'
+import { Box, Button, Paper, Grid, List, ListItem} from '@mui/material'
 import KeyboardDoubleArrowRightRoundedIcon from '@mui/icons-material/KeyboardDoubleArrowRightRounded';
 import KeyboardDoubleArrowLeftRoundedIcon from '@mui/icons-material/KeyboardDoubleArrowLeftRounded';
 import Carousel from '../components/Carousel';
+import { Link } from 'react-router-dom';
+
 
 const Home = () => {
- const title = "Creating proposition that customers love"
-  const subtitle = "Brief about the Organization should be here "
+ const title = "COMMUNITY"
+  const subtitle = "One Community Platform Initiative: "
   return (
     <Box
     sx={{
@@ -21,31 +23,105 @@ const Home = () => {
     }}
   >
   <Carousel/>
-    <Typography
-      variant="h1"
-      sx={{
-        fontSize: { xs: "70px", sm: "5xl", md: "6xl" },
-        fontWeight: 800,
-      }}
-    >
-      {title}
-    </Typography>
-    <Typography
-      sx={{
-        fontSize: "lg",
-        color: "gray.500",
-        maxWidth: "54ch",
-      }}
-    >
-      {subtitle}
-    </Typography>
-    <div>
-    <Typography variant='h5' color="secondary" sx={{fontWeight: 'bold'}}>COMMUNITY</Typography>
-    <Typography variant="body2" color="initial" textAlign={'justify'} p={2}>A proud support of youth-based cause and local not-for-profit Organization. Founded in 2018 by innovative thinkers. “One Community Platform Initiative,
-    (OCPI)”, intends to reverse the research - technology degradation that is occurring now in Africa’s rural areas so that rural and nomadic populations have
-    continued access to research and informational resources on which they have depended for so many years.</Typography>
-    <Button variant="contained" disableElevation  sx={{justifyItems: 'center', padding: '4'}} startIcon={<KeyboardDoubleArrowLeftRoundedIcon/>} endIcon={<KeyboardDoubleArrowRightRoundedIcon/>}>Explore</Button>
-    </div>
+
+  <Paper elevation={2} sx={{margin:'auto', marginBottom:'10px', width:'95%', padding:'5px'}}>
+  <Typography variant='h5' color="secondary" sx={{fontWeight: 'bold',
+marginTop:'20px'}}>{title}</Typography>
+  <Typography variant='body1'>
+    {subtitle}
+  </Typography>
+    <Box color="initial" textAlign={'justify'} p={2} >A proud support of youth-based cause and local not-for-profit Organization. Founded in 2018 by innovative thinkers. “One Community Platform Initiative, (OCPI)”, intends to reverse the research - technology degradation that is occurring now in Africa’s rural areas so that rural and nomadic populations have
+    continued access to research and informational resources on which they have depended for so many years.</Box>
+    <Grid container spacing={2}>
+    <Grid item xs={12} md={6}>
+    <Paper sx={{padding:'10px'}}>
+    <Typography variant='h6'>Membership:</Typography>
+    <Grid container >
+    <Grid xs={3}  component={Link} to="../routes/Home">Join OCPI</Grid>|
+    <Grid xs={4}  component={Link} to="../routes/Home">Individual Memebership</Grid>|
+    <Grid xs={4}  component={Link} to="../routes/Home">Institutional Membership</Grid>
+    </Grid>
+
+    </Paper>
+    </Grid>
+    <Grid item xs={12} md={6}>
+    <Paper sx={{padding:'10px'}}>
+    <Typography variant='h6'>Events:</Typography>
+    <Grid container >
+    <Grid xs={4} component={Link} to="../routes/Home">OCPI Events</Grid>|
+    <Grid xs={4} component={Link} to="../routes/Home">Annual Conference</Grid>|
+    <Grid xs={3} component={Link} to="../routes/Home">Workshops</Grid>
+    </Grid>
+
+    </Paper>
+    </Grid>
+    <Grid item xs={12} md={6}>
+    <Paper sx={{padding:'10px'}}>
+    <Typography variant='h6'>The latest:</Typography>
+    <Grid container >
+    <Grid xs={3} component={Link} to="../routes/Home">Our Blog</Grid>|
+    <Grid xs={4} component={Link} to="../routes/Home">All News</Grid>|
+    <Grid xs={4} component={Link} to="../routes/Home">Newsletter signup</Grid>
+    </Grid>
+
+    </Paper>
+    </Grid>
+    <Grid item xs={12} md={6}>
+    <Paper sx={{padding:'10px'}}>
+    <Typography variant='h6'>About Us:</Typography>
+    <Grid container >
+    <Grid xs={3} component={Link} to="../routes/Home">About OCPI</Grid>|
+    <Grid xs={4} component={Link} to="../routes/Home">Volunteer</Grid>|
+    <Grid xs={4} component={Link} to="../routes/Home">Become One Community Agent</Grid>
+    </Grid>
+
+    </Paper>
+    </Grid>
+    
+    </Grid>
+    <Button variant="text" color='inherit' component={Link} to="../routes/community"  sx={{justifyItems: 'center', padding: '10px'}} startIcon={<KeyboardDoubleArrowLeftRoundedIcon/>} endIcon={<KeyboardDoubleArrowRightRoundedIcon/>}>Read More</Button>
+    </Paper>
+
+
+    <Paper elevation={2} sx={{margin:'auto', marginBottom:'10px', width:'95%', padding:'5px'}}>
+        <Typography variant='h6' color="secondary" sx={{fontWeight: 'bold',
+        marginTop:'20px'}}>JEOLINKS DIRECTORIATES:</Typography>
+        <Typography variant='body1'>Just check out all of the directorates lists below to get a general idea of what we do</Typography>
+        <Grid  container>
+          <Grid item md={3} xs={12}>
+          <Paper>
+          <Typography variant='h6'>Research Services:</Typography>
+          <ListItem>-Research Computing</ListItem>
+          <ListItem>-Geospatial Platform</ListItem>
+          <ListItem>-Support & Consultation</ListItem>
+          </Paper>
+          </Grid>
+          <Grid md={3} xs={12}>
+          <Paper>
+          <Typography variant='h6'>Technology Solutions:</Typography>
+          <ListItem>-Mobile Applications Services</ListItem>
+          <ListItem>-Web Development Services</ListItem>
+          <ListItem>-Enterprise Resource Planning</ListItem>
+          </Paper>
+          </Grid>
+          <Grid md={3} xs={12}>
+          <Paper>
+          <Typography variant='h6'>Communication Services:</Typography>
+          <ListItem>-Advertising & Marketing Services</ListItem>
+          <ListItem>-Corporate Comm. & Media Dev.</ListItem>
+          <ListItem>-Computer Labs & Sales Services</ListItem>
+          </Paper>
+          </Grid>
+          <Grid md={3} xs={12}>
+          <Paper>
+          <Typography variant='h6'>Educational Services:</Typography>
+          <ListItem >-Education Program & Support</ListItem>
+          <ListItem >-Education Research & Academy</ListItem>
+          <ListItem >-Education Resource & Mgt.</ListItem>
+          </Paper>
+          </Grid>
+        </Grid>
+    </Paper>
   </Box>
   )
 }

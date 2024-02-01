@@ -8,7 +8,7 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import MenuIcon from '@mui/icons-material/Menu';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { ButtonGroup, ClickAwayListener, Divider, Fade, Grow, MenuList, Paper, Popper } from '@mui/material';
+import { ButtonGroup, ClickAwayListener, Fade, Grow, MenuList, Paper, Popper } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 
@@ -59,10 +59,11 @@ export default function ButtonAppBar() {
 
 
   return (
-    <Box sx={{ paddingY: '0',
-      display:{xs: 'none', md:'flex'}
+    <Box zIndex={20} sx={{ paddingY: '0',
+      display:{xs: 'none', md:'flex'},
+      position:'sticky', top: '0'
     }}>
-      <AppBar  elevation={1} position="static" sx={{paddingY: '0'}}>
+      <AppBar  elevation={1} sx={{paddingY: '0',}}>
         <Toolbar sx={{
         justifyContent: 'space-between',  paddingY: '0',
         }} >

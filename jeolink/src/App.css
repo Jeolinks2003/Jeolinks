@@ -3,7 +3,5 @@ body{
   height: 100vh;
   margin: 0;
   background-color: #E9F1FA;
-}
-*{
-  transform: translateY();
+  font-family: 'Roboto';
 }
