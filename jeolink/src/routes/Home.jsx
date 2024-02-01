@@ -1,10 +1,11 @@
 import React from 'react'
 import Typography from '@mui/material/Typography'
-import { Box, Button, Paper, Grid, List, ListItem} from '@mui/material'
+import { Box, Button, Paper, Grid, List, ListItem, Divider} from '@mui/material'
 import KeyboardDoubleArrowRightRoundedIcon from '@mui/icons-material/KeyboardDoubleArrowRightRounded';
 import KeyboardDoubleArrowLeftRoundedIcon from '@mui/icons-material/KeyboardDoubleArrowLeftRounded';
 import Carousel from '../components/Carousel';
 import { Link } from 'react-router-dom';
+
 
 const researchs = [{name:'Research Computing'},{name:'Geospatial Platform'},{name:'Support & Consultation'}]
   const technologys =[{name:'Mobile Applications Services'},{name:'Web Development Services'},{name:'Enterprise Resource Planning'}]
@@ -103,33 +104,47 @@ marginTop:'20px'}}>{title}</Typography>
     <Paper elevation={0} sx={{margin:'auto', marginBottom:'20px', width:'95%', padding:'5px'}}>
         <Typography variant='h6' color="secondary" sx={{fontWeight: 'bold',
         marginTop:'20px'}}>JEOLINKS DIRECTORIATES:</Typography>
-        <Typography variant='body1'>Just check out all of the directorates lists below to get a general idea of what we do</Typography>
-        <Grid  container>
-          <Grid item md={3} xs={12}>
+        <Typography variant='body1' sx={{marginBottom:'10px'}}>Just check out all of the directorates lists below to get a general idea of what we do</Typography>
+        <Grid  container spacingY={2}>
+          <Grid item md={3} xs={12} sx={{marginBottom:'20px'}}>
           <Paper>
           <Typography variant='h6'>Research Services:</Typography>
         <span>{getResearch}</span>
           </Paper>
           </Grid>
-          <Grid md={3} xs={12}>
+          <Grid md={3} xs={12} sx={{marginBottom:'20px'}}>
           <Paper>
           <Typography variant='h6'>Technology Solutions:</Typography>
           <span>{getTechnologys}</span>
           </Paper>
           </Grid>
-          <Grid md={3} xs={12}>
+          <Grid md={3} xs={12} sx={{marginBottom:'20px'}}>
           <Paper>
           <Typography variant='h6'>Communication Services:</Typography>
           <span>{getCommunications}</span>
           </Paper>
           </Grid>
-          <Grid md={3} xs={12}>
+          <Grid md={3} xs={12} sx={{marginBottom:'20px'}}>
           <Paper>
           <Typography variant='h6'>Educational Services:</Typography>
           <span>{getEducationals}</span>
           </Paper>
           </Grid>
         </Grid>
+    </Paper>
+
+    <Paper elevation={0} sx={{margin:'auto', marginBottom:'20px', width:'95%', padding:'5px'}}>
+    <Typography variant="h6" color="initial" sx={{width:'100%', backGroundColor:'background'}}>ABOUT US</Typography>
+    <Divider/>
+    <Box>
+    <Typography variant="body1"  color="initial" marginBottom={'20px'}><span sx={{fontWeight:'500', fontsize:'20px'}}>Who We Are:</span> we originally started in 2018 as a startup firm, JEOLINKS has pave its way into the heights of innovative technology services world, envision to
+    develop clients into informed, proactive users of internet services!</Typography>
+    <Typography variant="body1"  color="initial" marginBottom={'20px'}><span sx={{fontWeight:'500', fontsize:'20px'}}>What we do:</span> Our highly skilled team keep pace with our community’s emerging needs, we continue to evolve our competencies across four main families of
+    practice, including Planning and Design, Service Delivery and Operations, Data Strategy, and Innovative Technology</Typography>
+    <Typography variant="body1"  color="initial" marginBottom={'20px'}><span sx={{fontWeight:'500px', fontsize:'20px'}}>Why Us:</span>Your search for your IT/consulting needs is now over- JEOLINKS was your missing element. Our pricing is completely bespoke and is based on your
+    objectives.</Typography>
+    
+    </Box>
     </Paper>
   </Box>
   )

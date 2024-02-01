@@ -10,7 +10,7 @@ import Home from './routes/Home';
 import Directoriates from './routes/Directoriates';
 import Community from './routes/Community';
 import Work from './routes/Work';
-
+import 'typeface-roboto'
 
 const router = createBrowserRouter([
   {
