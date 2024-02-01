@@ -6,10 +6,27 @@ import KeyboardDoubleArrowLeftRoundedIcon from '@mui/icons-material/KeyboardDoub
 import Carousel from '../components/Carousel';
 import { Link } from 'react-router-dom';
 
-
+const researchs = [{name:'Research Computing'},{name:'Geospatial Platform'},{name:'Support & Consultation'}]
+  const technologys =[{name:'Mobile Applications Services'},{name:'Web Development Services'},{name:'Enterprise Resource Planning'}]
+  const communications = [{name:'Advertising & Marketing Services'},{name:'Corporate Comm. & Media Dev.'},{name:'Corporate Comm. & Media Dev'}]
+  const educationals = [{name:'Education Program & Support'},{name:'Education Research & Academy'},{name:'Education Resource & Mgt.'}]
 const Home = () => {
  const title = "COMMUNITY"
   const subtitle = "One Community Platform Initiative: "
+
+  const getResearch = researchs.map(research =>
+  <ListItem>-{research.name}</ListItem>
+    )
+    const getTechnologys = technologys.map(technology =>
+      <ListItem>-{technology.name}</ListItem>
+      )
+  const getCommunications = communications.map(communication =>
+    <ListItem>-{communication.name}</ListItem>
+    )
+    const getEducationals = educationals.map(educational =>
+      <ListItem>-{educational.name}</ListItem>
+      )
+      
   return (
     <Box
     sx={{
@@ -24,7 +41,7 @@ const Home = () => {
   >
   <Carousel/>
 
-  <Paper elevation={2} sx={{margin:'auto', marginBottom:'10px', width:'95%', padding:'5px'}}>
+  <Paper elevation={0} sx={{margin:'auto', marginBottom:'10px', width:'95%', padding:'5px'}}>
   <Typography variant='h5' color="secondary" sx={{fontWeight: 'bold',
 marginTop:'20px'}}>{title}</Typography>
   <Typography variant='body1'>
@@ -83,7 +100,7 @@ marginTop:'20px'}}>{title}</Typography>
     </Paper>
 
 
-    <Paper elevation={2} sx={{margin:'auto', marginBottom:'10px', width:'95%', padding:'5px'}}>
+    <Paper elevation={0} sx={{margin:'auto', marginBottom:'20px', width:'95%', padding:'5px'}}>
         <Typography variant='h6' color="secondary" sx={{fontWeight: 'bold',
         marginTop:'20px'}}>JEOLINKS DIRECTORIATES:</Typography>
         <Typography variant='body1'>Just check out all of the directorates lists below to get a general idea of what we do</Typography>
@@ -91,33 +108,25 @@ marginTop:'20px'}}>{title}</Typography>
           <Grid item md={3} xs={12}>
           <Paper>
           <Typography variant='h6'>Research Services:</Typography>
-          <ListItem>-Research Computing</ListItem>
-          <ListItem>-Geospatial Platform</ListItem>
-          <ListItem>-Support & Consultation</ListItem>
+        <span>{getResearch}</span>
           </Paper>
           </Grid>
           <Grid md={3} xs={12}>
           <Paper>
           <Typography variant='h6'>Technology Solutions:</Typography>
-          <ListItem>-Mobile Applications Services</ListItem>
-          <ListItem>-Web Development Services</ListItem>
-          <ListItem>-Enterprise Resource Planning</ListItem>
+          <span>{getTechnologys}</span>
           </Paper>
           </Grid>
           <Grid md={3} xs={12}>
           <Paper>
           <Typography variant='h6'>Communication Services:</Typography>
-          <ListItem>-Advertising & Marketing Services</ListItem>
-          <ListItem>-Corporate Comm. & Media Dev.</ListItem>
-          <ListItem>-Computer Labs & Sales Services</ListItem>
+          <span>{getCommunications}</span>
           </Paper>
           </Grid>
           <Grid md={3} xs={12}>
           <Paper>
           <Typography variant='h6'>Educational Services:</Typography>
-          <ListItem >-Education Program & Support</ListItem>
-          <ListItem >-Education Research & Academy</ListItem>
-          <ListItem >-Education Resource & Mgt.</ListItem>
+          <span>{getEducationals}</span>
           </Paper>
           </Grid>
         </Grid>
