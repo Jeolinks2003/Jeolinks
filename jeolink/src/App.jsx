@@ -20,6 +20,7 @@ function App() {
     <ThemeProvider theme={theme}>
     <Navbar/>
     <TemporaryDrawer/>
+    
     <Outlet />
 
     </ThemeProvider>

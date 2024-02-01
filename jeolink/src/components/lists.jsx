@@ -26,7 +26,7 @@ export default function NestedList() {
       component="nav"
       aria-labelledby="nested-list-subheader"
       subheader={
-        <Typography variant="h5" color="initial" p={2} component={Link} to="../routes/Home">JEOLINKS</Typography>
+        <Typography  variant="h5" color="initial" p={2}>JEOLINKS</Typography>
       }
     >
       <ListItemButton component={Link} to="../routes/Home">
@@ -41,9 +41,9 @@ export default function NestedList() {
         </ListItemIcon>
         <ListItemText primary="About Us" />
       </ListItemButton>
-      <Accordion>
+      <Accordion sx={{ paddingRight:2}}>
         <AccordionSummary
-          expandIcon={<ExpandMoreIcon  sx={{ paddingRight:2}}/>}
+          expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1-content"
           id="panel1-header"
         >
@@ -78,9 +78,9 @@ export default function NestedList() {
       </ListItemIcon>
       <ListItemText primary="Work" />
     </ListItemButton>
-    <Accordion>
+    <Accordion sx={{ paddingRight:2}}>
     <AccordionSummary
-      expandIcon={<ExpandMoreIcon sx={{ paddingRight:2}}/>}
+      expandIcon={<ExpandMoreIcon/>}
       aria-controls="panel1-content"
       id="panel1-header"
     >

@@ -27,8 +27,8 @@ export default function BasicModal() {
   const handleClose = () => setOpen(false);
 
   return (
-    <Box disableElevation  sx={{ flexGrow: 1, display:{xs: 'flex', md:'none'}}}>
-    <AppBar position="static">
+    <Box  sx={{ flexGrow: 1, display:{xs: 'flex', md:'none'}}}>
+    <AppBar elevation={1} position="static">
     <Toolbar sx={{justifyContent: 'space-between'}}>
     <Button color="inherit" component={Link} to="../routes/Home">JEOLINKS</Button>
     <div>
