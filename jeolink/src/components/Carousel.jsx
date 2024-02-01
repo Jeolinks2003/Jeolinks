@@ -29,7 +29,13 @@ function ImageCarousel() {
             <Typography
             variant="h1"
             sx={{
-              fontSize: { xs: "70px", sm: "5xl", md: "6xl" },
+              position: 'absolute',
+              top: '20%',
+              left: '10%',
+              right: '10%',
+              mixBlendMode: 'overlay',
+              textShadow: '0 5px solid black',
+              fontSize: { xs: "70px", sm: "5xl", md: "100px" },
               fontWeight: 800,
             }}
           >
