@@ -15,7 +15,6 @@ const Home = () => {
       flex: 1,
       height: "100vh",
       alignItems: "center",
-
       gap: 2,
       my: 6,
       textAlign: "center",
