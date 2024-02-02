@@ -4,6 +4,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Box, Button, CardActionArea, CardActions, Divider, Paper } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 export default function ActionAreaCard() {
   return (
@@ -32,7 +33,7 @@ export default function ActionAreaCard() {
         </CardContent>
       </CardActionArea>
       <CardActions>
-      <Button size="small" color="secondary">
+      <Button size="small" color="secondary" component={Link} to="../routes/About">
         TEAM INFORMATION
       </Button>
       </CardActions>
@@ -55,7 +56,7 @@ export default function ActionAreaCard() {
           </CardContent>
           </CardActionArea>
       <CardActions>
-      <Button size="small" color="secondary">
+      <Button size="small" color="secondary" component={Link} to="../routes/About">
         TEAM INFORMATION
       </Button>
       </CardActions>
@@ -78,7 +79,7 @@ export default function ActionAreaCard() {
         </CardContent>
       </CardActionArea>
       <CardActions>
-      <Button size="small" color="secondary">
+      <Button size="small" color="secondary" component={Link} to="../routes/About">
         TEAM INFORMATION
       </Button>
       </CardActions>
@@ -101,7 +102,7 @@ export default function ActionAreaCard() {
         </CardContent>
       </CardActionArea>
       <CardActions>
-      <Button size="small" color="secondary">
+      <Button size="small" color="secondary" component={Link} to="../routes/About">
         TEAM INFORMATION
       </Button>
       </CardActions>

@@ -228,14 +228,14 @@ padding:'20px', borderRadius:'10px'}}>{title}</Typography>
     <Grid container sx={{marginTop:'40px'}}>
       <Grid item md={6} xs={12} p={6}sx={{padding:{xs:'2px', md:'10px'},
       width:'100%',
-    display:'block'}} >
+    display:'block', marginBottom:'20px',}} >
         <Form noValidate autoComplete='off'>
           <Typography variant='h6'>FEEDBACK FORM</Typography>
-          <TextField  required label="Name" defaultValue="Please enter your full name"
+          <TextField  required label="Please enter your full name" 
           size="small" variant='standard' type='text' color='primary'sx={{ width:'100%',}}/>
-          <TextField required label="Email" defaultValue="Please enter your email address"
+          <TextField required label="Please enter your email address" 
           size="small" variant='standard' type='text' color='primary'sx={{ width:'100%',}}/>
-          <TextField required label="Phone" defaultValue="Please enter a phone number where you can be reached"
+          <TextField required label="Please Enter Your Phone Number"
           size="small" variant='standard' type='number' color='primary'sx={{ width:'100%',}}/>
           <FormLabel >Contact method preference</FormLabel>
           <RadioGroup required
@@ -254,8 +254,9 @@ padding:'20px', borderRadius:'10px'}}>{title}</Typography>
           <Button onClick={() => console.log('you Submitted')} variant='outlined' color='secondary' type='submit'endIcon={<KeyboardDoubleArrowRightRounded />} sx={{display:'flex', marginTop:'10px'}} > Submit</Button>
         </Form>
       </Grid>
+
       <Grid item md={6} xs={12} p={6}sx={{padding:{xs:'2px', md:'10px'},width:'100%',
-      display:'block'}}>
+      display:'block', marginTop:'20px',}}>
       <Card elevation={0}>
       <Typography variant="h6" color="initial">Contact Us</Typography>
       <Typography variant="body1" color="initial" sx={{marginBottom:'40px'}}>Questions or comment? | Please contact us – we’d love to hear from you</Typography>

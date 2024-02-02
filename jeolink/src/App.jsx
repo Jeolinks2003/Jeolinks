@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar.jsx";
 import TemporaryDrawer from "./components/Drawer.jsx";
 import { createTheme } from "@mui/material";
 import { ThemeProvider } from "@emotion/react";
+import Socialbar from "./components/Socialbar.jsx";
 
 const theme = createTheme({
   palette:{
@@ -18,6 +19,7 @@ function App() {
   return (
 
     <ThemeProvider theme={theme}>
+    <Socialbar/>
     <Navbar/>
     <TemporaryDrawer/>
     

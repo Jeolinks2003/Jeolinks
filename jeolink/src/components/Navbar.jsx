@@ -8,7 +8,7 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import MenuIcon from '@mui/icons-material/Menu';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { ButtonGroup, ClickAwayListener, Fade, Grow, MenuList, Paper, Popper } from '@mui/material';
+import { ButtonGroup, ClickAwayListener, Fade, Grow, MenuList, Paper, Popper, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 
@@ -63,12 +63,17 @@ export default function ButtonAppBar() {
       display:{xs: 'none', md:'flex'},
       position:'sticky', top: '0'
     }}>
-      <AppBar  elevation={1} sx={{paddingY: '0',}}>
+      <AppBar  elevation={1} sx={{paddingY: '0',}} position="static">
         <Toolbar sx={{
         justifyContent: 'space-between',  paddingY: '0',
         }} >
-        <Button color="inherit" component={Link} to="../routes/Home" sx={{paddingY: '0',
-          }}>JEOLINKS</Button>
+        <Typography
+        variant="h6"
+        noWrap
+        component="div"
+      >
+       JEOLINKS
+      </Typography>
 
         <div>
         <ButtonGroup variant="text"  disableElevation>
