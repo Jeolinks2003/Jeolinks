@@ -6,7 +6,7 @@ import KeyboardDoubleArrowLeftRoundedIcon from '@mui/icons-material/KeyboardDoub
 import Carousel from '../components/Carousel';
 import { Form, Link } from 'react-router-dom';
 import ActionAreaCard from '../components/Card';
-import KeyboardDoubleArrowRightRounded from '@mui/icons-material/KeyboardDoubleArrowRightRounded';
+import Feedback from '../components/Feedback';
 
 
 const researchs = [{name:'Research Computing'},{name:'Geospatial Platform'},{name:'Support & Consultation'}]
@@ -229,30 +229,7 @@ padding:'20px', borderRadius:'10px'}}>{title}</Typography>
       <Grid item md={6} xs={12} p={6}sx={{padding:{xs:'2px', md:'10px'},
       width:'100%',
     display:'block', marginBottom:'20px',}} >
-        <Form noValidate autoComplete='off'>
-          <Typography variant='h6'>FEEDBACK FORM</Typography>
-          <TextField  required label="Please enter your full name" 
-          size="small" variant='standard' type='text' color='primary'sx={{ width:'100%',}}/>
-          <TextField required label="Please enter your email address" 
-          size="small" variant='standard' type='text' color='primary'sx={{ width:'100%',}}/>
-          <TextField required label="Please Enter Your Phone Number"
-          size="small" variant='standard' type='number' color='primary'sx={{ width:'100%',}}/>
-          <FormLabel >Contact method preference</FormLabel>
-          <RadioGroup required
-          row
-          aria-labelledby="group-label"
-          name="buttons-group"
-          >
-          <FormControlLabel value="Phone" control={<Radio />} label="Phone" />
-          <FormControlLabel value="Email" control={<Radio />} label="Email" />
-          <FormControlLabel value="Do not contact" control={<Radio />} label="Do not contact" />
-          </RadioGroup>
-          <FormLabel >How can we help?</FormLabel>
-          <Divider/>
-          <FormLabel>TIP: Use the handle in the bottom-center or bottom-right corner to
-          expand the text field.</FormLabel>
-          <Button onClick={() => console.log('you Submitted')} variant='outlined' color='secondary' type='submit'endIcon={<KeyboardDoubleArrowRightRounded />} sx={{display:'flex', marginTop:'10px'}} > Submit</Button>
-        </Form>
+      <Feedback/>
       </Grid>
 
       <Grid item md={6} xs={12} p={6}sx={{padding:{xs:'2px', md:'10px'},width:'100%',
