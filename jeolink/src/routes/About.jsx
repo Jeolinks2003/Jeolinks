@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Typography from '@mui/material/Typography'
 import Footer from '../components/Footer';
-import { Box, Container, Divider } from '@mui/material';
+import { Box, Container, Divider, styled } from '@mui/material';
 
 const About = () => {
   const [date, setDate] = useState(new Date());
@@ -46,10 +46,25 @@ const About = () => {
       unique combination that attracts community, clients and customers who thrive in an environment of research, creativity and information access.
       JEOLINKS recognizes the importance of the following in order to achieve educational, research, communication and technology success:</Typography>
       </Box>
+      <Typography variant="subtitle1" textAlign={'center'} color="initial" sx={{fontWeight:'600'}}>Efficient Project Management - Updated Technologies - 24x7 IT Services Desk - Communication Channel - Grass Roots Consultation -
+      Technical Leadership - Local Relevant Content</Typography>
+      <Typography variant="body1" color="initial" sx={{mt:'10px', mb:'10px'}}>JEOLINKS Research Group, an organization is focused on providing innovative technology solutions, delivering exceptional community service,
+      and creating a reliable infrastructure that demonstrates value to the clients, companies, institutions, businesses, and communities of JEOLINKS.
+      Our pricing is completely custom-made and is based on your objectives.</Typography>
+      <Typography variant="overline" color="initial" sx={{mt:'10px', mb:'10px'}}>Executive Council</Typography>
+      <Typography variant="body1" color="initial" textAlign={'center'}>The Executive Council, (an exceptionally talented Crew) Focus on communicating and marketing values that delivers to clients exactly what communication
+      promises. JEOLINKS on Strategies that makes sense (yes, being talked about can be nice, but clients tell us being profitable matters more), Creative that works
+      (who doesn’t like winning awards, but have you ever heard of them making clients any money?) and on Target message delivery (saying all the right things – in
+      all the wrong places – is pretty much a waste of breath)</Typography>
+      <Typography variant="body1" color="initial" textAlign={'center'} mt={'20px'}>On purpose, on strategy, on massage, on target – if we focus on your success, we’ll succeed; too</Typography>
+      <Typography variant="body1" color="initial" mt={'20px'} textAlign={'center'}>We're a small, Friendly and Talented team. We craft Beautiful developmental solutions for awesome clients/communities across all the platform.
+      Enterprise & Research<b> (GCEO)</b> – Enterprise & Management <b>(GMD) –</b> Enterprise & Operation <b>(GM/COO) –</b> Digital & Technology <b>(CDO) –</b> Business & Communication <b>(CBO) –</b> Finance & Resource Mgt. <b>(CFO) –</b> Administration & Legal Mgt. <b>(CAO) –</b><br/>
+      Sustainability & Development <b>(CSO) –</b> Learning & Education <b>(CLO) –</b> System & Production <b>(CIO) -</b> Marketing & Communication <b>(CMO) –</b><br/>Research & Computation <b>(CRO) -</b> Program & Education <b>(CPO) –</b> Technology & Architecture <b>(CTO) -</b> Clients & Communication <b>(CCO) -</b><br/>Marketing & Promotion <b>(HMP) -</b> Hardware & Computer <b>(HHC) –</b> Legal & Compliance <b>(HLC) –</b> Finance & Accounts <b>(HFA) –</b> Events & Operations
+      <b>(HEO) –</b> Graphic & Designs <b>(HGP) -</b> Membership & Development <b>(HMD) -</b> Program & Operations <b>(HPO) –</b> Research & Development <b>(HRD)</b></Typography>
       </Box>
 <Footer/>
     </Container>
   )
 }
 
-export default About
+export default transition(About)

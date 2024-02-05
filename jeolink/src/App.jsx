@@ -1,33 +1,23 @@
-import { Outlet } from "react-router-dom";
-import Navbar from "./components/Navbar.jsx";
-import TemporaryDrawer from "./components/Drawer.jsx";
-import { createTheme } from "@mui/material";
-import { ThemeProvider } from "@emotion/react";
-import Socialbar from "./components/Socialbar.jsx";
-import Footer from "./components/Footer.jsx";
+import { Routes, Route, useLocation } from "module";
+import "./App.css";
+import Navbar from "./components/Navbar";
+import Home from "./routes/Home"
+import { AnimatePresence } from "framer-motion";
 
-const theme = createTheme({
-  palette:{
-    primary:{
-      main: '#E9F1FA'
-    },
-    secondary:{
-      main: '#00ABE4'
-    }
-  }
-})
+
 function App() {
-  return (
-
-    <ThemeProvider theme={theme}>
-    <Socialbar/>
-    <Navbar/>
-    <TemporaryDrawer/>
-    
-    <Outlet />
-    </ThemeProvider>
-
-  )
+  const location = useLocation();
+  return(
+ <>
+ <Navbar/>
+<AnimatePresence>
+<Routes location={location} key={location.pathname}>
+<Route index element={<Home/>} />
+<Route path="/About" element={<About/>}/>
+<Route path="/Contact" element={<Contact />} />
+</Routes>
+</AnimatePresence>
+ </>
+  );
 }
-
-export default App
+export default App;

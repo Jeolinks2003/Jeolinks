@@ -1,6 +1,6 @@
 import React from 'react'
 import Typography from '@mui/material/Typography'
-import { Box, Button, Paper, Grid, List, ListItem, Divider, Container, Card, FormGroup, FormControl, FormLabel, FormHelperText, TextField, makeStyles, RadioGroup, FormControlLabel, Radio} from '@mui/material'
+import { Box, Button, Paper, Grid, List, ListItem, Divider, Container, Card, FormGroup, FormControl, FormLabel, FormHelperText, TextField, makeStyles, RadioGroup, FormControlLabel, Radio, Grow} from '@mui/material'
 import KeyboardDoubleArrowRightRoundedIcon from '@mui/icons-material/KeyboardDoubleArrowRightRounded';
 import KeyboardDoubleArrowLeftRoundedIcon from '@mui/icons-material/KeyboardDoubleArrowLeftRounded';
 import Carousel from '../components/Carousel';
@@ -43,6 +43,7 @@ const Home = () => {
       textAlign: "center",
     }}
   >
+
   <Container>
   
   <Carousel/>
@@ -258,4 +259,4 @@ padding:'20px', borderRadius:'10px'}}>{title}</Typography>
   )
 }
 
-export default Home
+export default Transition(Home)

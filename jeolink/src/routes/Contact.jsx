@@ -1,6 +1,6 @@
 import Typography from '@mui/material/Typography'
 
-export default function Contact() {
+ function Contact() {
 
 
   return (
@@ -12,3 +12,4 @@ export default function Contact() {
       </>
   );
 }
+export default transition(Contact)
