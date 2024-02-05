@@ -7,6 +7,7 @@ import Carousel from '../components/Carousel';
 import { Form, Link } from 'react-router-dom';
 import ActionAreaCard from '../components/Card';
 import Feedback from '../components/Feedback';
+import Footer from '../components/Footer';
 
 
 const researchs = [{name:'Research Computing'},{name:'Geospatial Platform'},{name:'Support & Consultation'}]
@@ -252,6 +253,7 @@ padding:'20px', borderRadius:'10px'}}>{title}</Typography>
 
 
     </Container>
+    <Footer/>
   </Box>
   )
 }

@@ -4,6 +4,7 @@ import TemporaryDrawer from "./components/Drawer.jsx";
 import { createTheme } from "@mui/material";
 import { ThemeProvider } from "@emotion/react";
 import Socialbar from "./components/Socialbar.jsx";
+import Footer from "./components/Footer.jsx";
 
 const theme = createTheme({
   palette:{
@@ -24,7 +25,6 @@ function App() {
     <TemporaryDrawer/>
     
     <Outlet />
-
     </ThemeProvider>
 
   )

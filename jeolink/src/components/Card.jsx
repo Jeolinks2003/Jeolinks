@@ -3,7 +3,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { Box, Button, CardActionArea, CardActions, Divider, Paper } from '@mui/material';
+import { Box, Button, CardActionArea, CardActions, Divider, Grid, Paper } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 export default function ActionAreaCard() {
@@ -15,30 +15,9 @@ export default function ActionAreaCard() {
     <Divider/>
 <Box display={'flex'}>
 
-<Card sx={{ maxWidth: 345, margin:'10px', marginTop:'20px' }}>
-    <CardActionArea>
-        <CardMedia
-          component="img"
-          height="140"
-          image="https://media.istockphoto.com/id/1389898125/photo/young-woman-chewing-gum-cute-iconic-character-3d-rendering.jpg?s=2048x2048&w=is&k=20&c=AIvEivO7BjTwE-QVOfVeS0BypDzFpq4Xt_KVxk8L0yg="
-          alt="green iguana"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            GD (Team)
-          </Typography>
-          <Typography variant="body2" color="text.secondary" textAlign={'justify'}>
-          Graphic Design Team is responsible for conceptualization and implementaion of design of solutions to meet production strategies from concept to completion.
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions>
-      <Button size="small" color="secondary" component={Link} to="../routes/About">
-        TEAM INFORMATION
-      </Button>
-      </CardActions>
-    </Card>
-    <Card sx={{ maxWidth: 345, margin:'10px', marginTop:'20px' }}>
+<Grid container spacing={2}>
+    <Grid item xs={12} md={4} >
+    <Card sx={{ Width: 345, margin:'10px', marginTop:'20px' }}>
     <CardActionArea>
         <CardMedia
           component="img"
@@ -61,6 +40,8 @@ export default function ActionAreaCard() {
       </Button>
       </CardActions>
     </Card>
+    </Grid>
+    <Grid item xs={12} md={4}>
     <Card sx={{ maxWidth: 345, margin:'10px', marginTop:'20px' }}>
     <CardActionArea>
         <CardMedia
@@ -84,6 +65,9 @@ export default function ActionAreaCard() {
       </Button>
       </CardActions>
     </Card>
+    </Grid>
+
+    <Grid item xs={12} md={4}>
     <Card sx={{ maxWidth: 345, margin:'10px', marginTop:'20px' }}>
     <CardActionArea>
         <CardMedia
@@ -107,6 +91,40 @@ export default function ActionAreaCard() {
       </Button>
       </CardActions>
     </Card>
+    </Grid>
+
+    <Grid item xs={12} md={4}>
+    <Card sx={{ maxWidth: 345, margin:'10px', marginTop:'20px' }}>
+        <CardActionArea>
+            <CardMedia
+              component="img"
+              height="140"
+              image="https://media.istockphoto.com/id/1389898125/photo/young-woman-chewing-gum-cute-iconic-character-3d-rendering.jpg?s=2048x2048&w=is&k=20&c=AIvEivO7BjTwE-QVOfVeS0BypDzFpq4Xt_KVxk8L0yg="
+              alt="green iguana"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                GD (Team)
+              </Typography>
+              <Typography variant="body2" color="text.secondary" textAlign={'justify'}>
+              Graphic Design Team is responsible for conceptualization and implementaion of design of solutions to meet production strategies from concept to completion.
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+          <CardActions>
+          <Button size="small" color="secondary" component={Link} to="../routes/About">
+            TEAM INFORMATION
+          </Button>
+          </CardActions>
+        </Card>
+    </Grid>
+
+
+</Grid>
+
+ 
+
+
 
       </Box>
       </Paper>

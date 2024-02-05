@@ -65,7 +65,7 @@ export default function ButtonAppBar() {
     }}>
       <AppBar  elevation={1} sx={{paddingY: '0',}} position="static">
         <Toolbar sx={{
-        justifyContent: 'space-between',  paddingY: '0',
+        justifyContent: 'space-between',  paddingY: '0', backgroundColor:'white'
         }} >
         <Typography
         variant="h6"
@@ -87,7 +87,7 @@ export default function ButtonAppBar() {
         OUR DIRECTORATES <ExpandMoreIcon/> </Button>
 
         <Menu
-        bgColor={'primary'}
+        
         id="basic-menu"
         anchorEl={anchorEl}
         open={open}
