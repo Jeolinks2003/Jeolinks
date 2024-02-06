@@ -30,7 +30,7 @@ export default function BasicModal() {
     <Box zIndex={20} sx={{ flexGrow: 1, display:{xs: 'flex', md:'none'},position:'sticky', top: '0'}}>
     <AppBar elevation={1} position="static">
     <Toolbar sx={{justifyContent: 'space-between', backgroundColor:'white'}}>
-    <Button color="inherit" component={Link} to="../routes/Home">JEOLINKS</Button>
+    <Button color="inherit" component={Link} to="/">JEOLINKS</Button>
     <div>
       <IconButton
    size="large"

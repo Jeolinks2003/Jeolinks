@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Typography from '@mui/material/Typography'
 import Footer from '../components/Footer';
-import { Box, Container, Divider, styled } from '@mui/material';
+import { Box, Container, Divider } from '@mui/material';
 
 const About = () => {
   const [date, setDate] = useState(new Date());
@@ -67,4 +67,4 @@ const About = () => {
   )
 }
 
-export default transition(About)
+export default About

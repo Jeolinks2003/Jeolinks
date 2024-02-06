@@ -77,7 +77,7 @@ export default function ButtonAppBar() {
 
         <div>
         <ButtonGroup variant="text"  disableElevation>
-        <Button color="inherit" component={Link} to="../routes/Home">HOME</Button>
+        <Button color="inherit" component={Link} to="/">HOME</Button>
         <Button color="inherit" component={Link} to="../routes/About">ABOUT US</Button>
         <Button color="inherit" id="first-button"
         aria-controls={open ? 'basic-menu' : undefined}
@@ -102,8 +102,8 @@ export default function ButtonAppBar() {
         <MenuItem onClick={handleClose} component={Link} to="../routes/Directoriates">Communication Services</MenuItem>
         <MenuItem onClick={handleClose} component={Link} to="../routes/Directoriates">Educational Services</MenuItem>
       </Menu>
-        <Button color="inherit"  component={Link} to="../routes/Work">WORK</Button>
-        <Button color="inherit"
+        <Button color="primary"  component={Link} to="../routes/Work">WORK</Button>
+        <Button color="primary"
         ref={anchorRef}
         id="composition-button"
         aria-controls={open ? 'composition-menu' : undefined}
@@ -145,7 +145,7 @@ export default function ButtonAppBar() {
       )}
     </Popper>
       
-        <Button color="inherit"  component={Link} to="../routes/Contact">CONTACT US</Button>
+        <Button color="primary"  component={Link} to="../routes/Contact">CONTACT US</Button>
 
         </ButtonGroup>
         <IconButton

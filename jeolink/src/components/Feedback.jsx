@@ -1,7 +1,6 @@
-import { Button, Divider, FormControlLabel, FormLabel, Radio, RadioGroup, TextField, Typography } from '@mui/material'
+import {Box, Button, Divider, FormControlLabel, FormLabel, Radio, RadioGroup, TextField, Typography } from '@mui/material'
 import React, { useState } from 'react'
 import KeyboardDoubleArrowRightRounded from '@mui/icons-material/KeyboardDoubleArrowRightRounded';
-import { Form } from 'react-router-dom'
 
 const Feedback = () => {
   const classes = useState()
@@ -43,7 +42,7 @@ const handleSubmit = (e) => {
 
 
   return (
-    <Form noValidate autoComplete='off' onSubmit={handleSubmit}>
+    <Box component='form' noValidate autoComplete='off' onSubmit={handleSubmit}>
     <Typography variant='h6'>FEEDBACK FORM</Typography>
     <TextField onChange={(e) => setFullName(e.target.value)} error={fullNameError} required label="Please enter your full name" 
     size="small" variant='standard' type='text' color='primary'sx={{ width:'100%',}}/>
@@ -66,7 +65,7 @@ const handleSubmit = (e) => {
     <FormLabel>TIP: Use the handle in the bottom-center or bottom-right corner to
     expand the text field.</FormLabel>
     <Button  variant='outlined' color='secondary' type='submit'endIcon={<KeyboardDoubleArrowRightRounded />} sx={{display:'flex', marginTop:'10px'}} > Submit</Button>
-  </Form>
+  </Box>
   )
 }
 

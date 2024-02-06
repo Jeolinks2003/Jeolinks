@@ -29,13 +29,13 @@ export default function NestedList() {
         <Typography  variant="h5" color="initial" p={2}>JEOLINKS</Typography>
       }
     >
-      <ListItemButton elevation={1} component={Link} to="../routes/Home">
+      <ListItemButton elevation={1} component={Link} to="/">
         <ListItemIcon>
           <HomeRoundedIcon />
         </ListItemIcon>
         <ListItemText primary="Home" />
       </ListItemButton>
-      <ListItemButton elevation={1} component={Link} to="../routes/About">
+      <ListItemButton elevation={1} component={Link} to="/About">
         <ListItemIcon>
           <InfoRoundedIcon />
         </ListItemIcon>
@@ -57,22 +57,22 @@ export default function NestedList() {
         </AccordionSummary>
         <AccordionDetails>
         <List disablePadding>
-          <ListItemButton component={Link} to="../routes/Directoriates">
+          <ListItemButton component={Link} to="/Directoriates">
             <ListItemText primary="Research Services" />
             </ListItemButton>
-        <ListItemButton component={Link} to="../routes/Directoriates">
+        <ListItemButton component={Link} to="/Directoriates">
             <ListItemText primary="Technology Solutions" />
             </ListItemButton>
-            <ListItemButton component={Link} to="../routes/Directoriates">
+            <ListItemButton component={Link} to="/Directoriates">
             <ListItemText primary="Communication Services" />
             </ListItemButton>
-            <ListItemButton component={Link} to="../routes/Directoriates">
+            <ListItemButton component={Link} to="/Directoriates">
             <ListItemText primary="Educational Services" />
             </ListItemButton>
         </List>
         </AccordionDetails>
       </Accordion>
-      <ListItemButton elevation={1} component={Link} to="../routes/Work">
+      <ListItemButton elevation={1} component={Link} to="/Work">
       <ListItemIcon>
         <WorkspacesRoundedIcon />
       </ListItemIcon>
@@ -94,13 +94,13 @@ export default function NestedList() {
     </AccordionSummary>
     <AccordionDetails>
     <List disablePadding>
-      <ListItemButton component={Link} to="../routes/Community">
+      <ListItemButton component={Link} to="/Community">
         <ListItemText primary="O C P I" />
         </ListItemButton>
     </List>
     </AccordionDetails>
   </Accordion>
-      <ListItemButton elevation={1} component={Link} to="../routes/Contact">
+      <ListItemButton elevation={1} component={Link} to="/Contact">
       <ListItemIcon>
         <CallRoundedIcon />
       </ListItemIcon>

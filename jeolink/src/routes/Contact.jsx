@@ -12,4 +12,4 @@ import Typography from '@mui/material/Typography'
       </>
   );
 }
-export default transition(Contact)
+export default Contact
