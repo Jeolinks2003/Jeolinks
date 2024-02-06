@@ -36,7 +36,7 @@ const handleSubmit = (e) => {
 
   if (fullName && email && phoneNo && reachs) {
     // alert('A name was submitted: ' + this.target.value);
-    alert( 'the following details was provided' + fullName+ email+ phoneNo+ reachs)
+    alert( 'the following details was provided' +  fullName+  email+ phoneNo+ reachs)
   }
 }
 

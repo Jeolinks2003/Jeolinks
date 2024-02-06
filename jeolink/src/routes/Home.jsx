@@ -1,15 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Typography from '@mui/material/Typography'
 import { Box, Button, Paper, Grid, List, ListItem, Divider, Container, Card, FormGroup, FormControl, FormLabel, FormHelperText, TextField, makeStyles, RadioGroup, FormControlLabel, Radio, Grow} from '@mui/material'
 import KeyboardDoubleArrowRightRoundedIcon from '@mui/icons-material/KeyboardDoubleArrowRightRounded';
 import KeyboardDoubleArrowLeftRoundedIcon from '@mui/icons-material/KeyboardDoubleArrowLeftRounded';
 import Carousel from '../components/Carousel';
-import {  Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import ActionAreaCard from '../components/Card';
 import Feedback from '../components/Feedback';
 import Footer from '../components/Footer';
-// import Transition from 'react-transition-group/Transition';
-// import {Transition } from 'framer-motion';
 
 
 const researchs = [{name:'Research Computing'},{name:'Geospatial Platform'},{name:'Support & Consultation'}]
@@ -37,11 +35,9 @@ const researchs = [{name:'Research Computing'},{name:'Geospatial Platform'},{nam
    
       // const Transition = [Transition, useTransition] =useState();
   return (
-    <Box
+<Container
     sx={{
-      width: '100%',
       flex: 1,
-      height: "100vh",
       alignItems: "center",
       gap: 2,
       my: 6,
@@ -49,7 +45,7 @@ const researchs = [{name:'Research Computing'},{name:'Geospatial Platform'},{nam
     }}
   >
 
-  <Container>
+
   
   <Carousel/>
 
@@ -108,7 +104,7 @@ padding:'20px', borderRadius:'10px'}}>{title}</Typography>
     </Grid>
     
     </Grid>
-    <Button variant="text" color='inherit' component={Link} to="../routes/community"  sx={{justifyItems: 'center', padding: '10px'}} startIcon={<KeyboardDoubleArrowLeftRoundedIcon/>} endIcon={<KeyboardDoubleArrowRightRoundedIcon/>}>Read More</Button>
+    <Button variant="text" color='inherit' component={Link} to="/Community"  sx={{justifyItems: 'center', padding: '10px'}} startIcon={<KeyboardDoubleArrowLeftRoundedIcon/>} endIcon={<KeyboardDoubleArrowRightRoundedIcon/>}>Read More</Button>
     </Paper>
 
 
@@ -204,7 +200,7 @@ padding:'20px', borderRadius:'10px'}}>{title}</Typography>
     practice, including Planning and Design, Service Delivery and Operations, Data Strategy, and Innovative Technology</Typography>
     <Typography variant="body1"  color="initial" marginBottom={'20px'}><b>Why Us:</b>Your search for your IT/consulting needs is now over- JEOLINKS was your missing element. Our pricing is completely bespoke and is based on your
     objectives.</Typography>
-    <Button variant="text" color='inherit' component={Link} to="../routes/About"  sx={{justifyItems: 'center', padding: '10px'}} startIcon={<KeyboardDoubleArrowLeftRoundedIcon/>} endIcon={<KeyboardDoubleArrowRightRoundedIcon/>}>Read More</Button>
+    <Button variant="text" color='inherit' component={Link} to="/About"  sx={{justifyItems: 'center', padding: '10px'}} startIcon={<KeyboardDoubleArrowLeftRoundedIcon/>} endIcon={<KeyboardDoubleArrowRightRoundedIcon/>}>Read More</Button>
     </Box>
     </Paper>
 
@@ -258,9 +254,8 @@ padding:'20px', borderRadius:'10px'}}>{title}</Typography>
 
 
 
-    </Container>
-    <Footer/>
-  </Box>
+
+</Container>
   )
 }
 

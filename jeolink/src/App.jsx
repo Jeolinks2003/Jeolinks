@@ -1,8 +1,9 @@
-import { ThemeProvider, createTheme } from "@mui/material";
+import { ThemeProvider, createTheme} from "@mui/material";
 import "./App.css";
 import Navbar from "./components/Navbar";
+import Drawer from "./components/Drawer";
 import About from "./routes/About";
-import Errorpage from "./routes/Errorpage";
+// import Errorpage from "./routes/Errorpage";
 import Contact from "./routes/Contact";
 import Home from "./routes/Home"
 import { BrowserRouter ,Routes, Route} from "react-router-dom";
@@ -24,6 +25,7 @@ function App() {
   return(
 <ThemeProvider theme={customTheme}>
 <BrowserRouter>
+    <Drawer/>
     <Navbar/>
     <Routes>
        <Route path="/" element={<Home/>} />
@@ -32,7 +34,7 @@ function App() {
         <Route path="/Contact" element={<Contact />} />
     </Routes>
     <Footer/>
-        </BrowserRouter>
+</BrowserRouter>
 </ThemeProvider>
   );
 }
